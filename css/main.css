@@ -107,14 +107,18 @@ body{
 	will-change: transform;
 	transition: var(--transition);
 }
-.main-article__paragraph{
-	max-width: calc(var(--index)*30);
-	font-size:  calc(var(--index)*.8);
-	margin-top: calc(var(--index)/1.25);
+.main-article__paragraph {
+	max-width: calc(var(--index) * 30);
+	font-size: calc(var(--index) * .8);
+	margin-top: calc(var(--index) / 1.25);
 	transform: var(--main-article-transform);
 	will-change: transform;
 	transition: var(--transition);
+	text-align: center; /* Выравнивание текста по центру */
+	margin-left: auto; /* Центрирование элемента по горизонтали */
+	margin-right: auto; /* Центрирование элемента по горизонтали */
 }
+
 .content{
 	will-change: transform ;
 }
