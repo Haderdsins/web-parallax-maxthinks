@@ -30,7 +30,7 @@ body{
 	position: absolute;
 	z-index: 100;
 	width: 100%;
-	height: calc(var(--index)*10);
+	height: calc(var(--index)*5);
 	background-image: url(../img/ground.png);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -60,14 +60,16 @@ body{
    transform: translate3d(0, calc(var(--scrollTop)/1.6), 0);
    z-index: 0;
 }
-.layers__middle{/*настройка картинки по середке на первом слайде*/
-   transform: translate3d(0, calc(var(--scrollTop)/2.5), 0);
+.layers__middle {
+	transform: translate3d(0, calc(var(--scrollTop)/2.5), 0);
+	z-index: 11;
 }
+
 .layers__front{/*настройка ближней нижней картинки на первом слайде*/
    transform: translate3d(0, calc(var(--scrollTop)/5.7), 0);
 }
 .layer__header{/*настройка шрифта и текста на первом слайде обе строчки*/
-   z-index: 1;
+   z-index: 2;
    transform: translate3d(0, calc(var(--scrollTop)/2), 0);
    will-change: transform;
    text-transform: uppercase;
@@ -85,47 +87,55 @@ body{
 	letter-spacing: calc(var(--index)/3.5);
 	margin-top:calc(var(--index)*-.75); 
 }
-.main-article{
+.main-article {
 	--main-article-transform: translate3d(0, calc(var(--scrollTop)/-7.5), 0);
-   min-height: 100vh;
-	 background-size: cover;
-	 background-position: center;
-	 color: var(--text);
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-	 position: relative;
-	 text-align: center;
-	 top: -1px;
-	 z-index: 10;
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+	color: var(--text);
+	display: flex;
+	justify-content: right; /* Это центрирует все дочерние элементы по горизонтали */
+	align-items: center;
+	position: relative;
+	text-align: right; /* Это также может влиять на выравнивание текста */
+	top: -1px;
+	z-index: 10;
 }
-.main-article__header{
+
+.main-article__header {
 	text-transform: uppercase;
-	font-size:  calc(var(--index)*1.5);
-	letter-spacing:  calc(var(--index)/7.5);
+	font-size: calc(var(--index) * 2.5);
+	letter-spacing: calc(var(--index) / 7.5);
 	transform: var(--main-article-transform);
 	will-change: transform;
 	transition: var(--transition);
+	margin-left: auto; /* Это сдвигает элемент вправо, делая текст выровненным по правому краю */
+	margin-right: 15%; /* Отступ от правой границы в 10% ширины контейнера */
+	margin-top: calc(var(--index) / 0.08);
 }
+
 .main-article__paragraph {
 	max-width: calc(var(--index) * 30);
-	font-size: calc(var(--index) * .8);
+	font-size: calc(var(--index) * 1.1);
 	margin-top: calc(var(--index) / 1.25);
 	transform: var(--main-article-transform);
 	will-change: transform;
 	transition: var(--transition);
-	text-align: center; /* Выравнивание текста по центру */
-	margin-left: auto; /* Центрирование элемента по горизонтали */
-	margin-right: auto; /* Центрирование элемента по горизонтали */
+	margin-left: auto; /* Это сдвигает элемент вправо, делая текст выровненным по правому краю */
+	margin-right: 15%; /* Отступ от правой границы в 10% ширины контейнера */
 }
+
 
 .content{
 	will-change: transform ;
 }
-.copy{
+.copy {
 	position: absolute;
 	bottom: calc(var(--index)*2.5);
-	opacity: .45;
-	font-size: calc(var(--index)*.75);
-	letter-spacing:  calc(var(--index)/37.5);
+	opacity: 0.45;
+	font-size: calc(var(--index)*0.75);
+	letter-spacing: calc(var(--index)/37.5);
+	margin-left: auto; /* Это сдвигает элемент вправо, делая текст выровненным по правому краю */
+	margin-right: 45%;
+
 }
