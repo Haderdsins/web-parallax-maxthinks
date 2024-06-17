@@ -1,5 +1,5 @@
 *{
-   margin:0; 
+   margin:0;
    padding: 0;
    box-sizing: border-box;
 }
@@ -62,7 +62,7 @@ body{
 }
 .layers__middle {
 	transform: translate3d(0, calc(var(--scrollTop)/2.5), 0);
-	z-index: 11;
+	z-index: 3;
 }
 
 .layers__front{/*настройка ближней нижней картинки на первом слайде*/
@@ -85,7 +85,7 @@ body{
 .layers_caption{/*настройка текста на первом слайде 1 строчка*/
 	font-size: calc(var(--index)/1.175);
 	letter-spacing: calc(var(--index)/3.5);
-	margin-top:calc(var(--index)*-.75); 
+	margin-top:calc(var(--index)*-.75);
 }
 .main-article {
 	--main-article-transform: translate3d(0, calc(var(--scrollTop)/-7.5), 0);
